@@ -25,7 +25,7 @@ function getColorData() {
 				throw new Error("Error occurs");
 			}
 			let data = await response.json();
-			dispatch(colorDataSuccess(data));
+			dispatch(colorDataSuccess(data.colors));
 		} catch (err) {
 			dispatch(colorDataError(err.message));
 		}
