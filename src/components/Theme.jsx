@@ -12,26 +12,6 @@ function Theme() {
 					cursor="pointer"
 					viewBox="0 0 24 24"
 					fill="none"
-					strokeWidth="2"
-					strokeLinecap="round"
-					strokeLinejoin="round"
-					className="w-6 h-6 mr-2"
-				>
-					<path
-						d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-						className="stroke-slate-400 dark:stroke-slate-500"
-					></path>
-					<path
-						d="M12 4v1M17.66 6.344l-.828.828M20.005 12.004h-1M17.66 17.664l-.828-.828M12 20.01V19M6.34 17.664l.835-.836M3.995 12.004h1.01M6 6l.835.836"
-						className="stroke-slate-400 dark:stroke-slate-500"
-					></path>
-				</svg>
-			) : (
-				<svg
-					onClick={() => setTheme(LIGHT)}
-					cursor="pointer"
-					viewBox="0 0 24 24"
-					fill="none"
 					className="w-6 h-6 mr-2"
 				>
 					<path
@@ -49,6 +29,26 @@ function Theme() {
 						clipRule="evenodd"
 						d="M17 3a1 1 0 0 1 1 1 2 2 0 0 0 2 2 1 1 0 1 1 0 2 2 2 0 0 0-2 2 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 1 1 0-2 2 2 0 0 0 2-2 1 1 0 0 1 1-1Z"
 						className="fill-slate-400 dark:fill-slate-500"
+					></path>
+				</svg>
+			) : (
+				<svg
+					onClick={() => setTheme(LIGHT)}
+					cursor="pointer"
+					viewBox="0 0 24 24"
+					fill="none"
+					strokeWidth="2"
+					strokeLinecap="round"
+					strokeLinejoin="round"
+					className="w-6 h-6 mr-2 stroke-white"
+				>
+					<path
+						d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+						className="stroke-slate-400 dark:stroke-slate-500"
+					></path>
+					<path
+						d="M12 4v1M17.66 6.344l-.828.828M20.005 12.004h-1M17.66 17.664l-.828-.828M12 20.01V19M6.34 17.664l.835-.836M3.995 12.004h1.01M6 6l.835.836"
+						className="stroke-white dark:stroke-white"
 					></path>
 				</svg>
 			)}
