@@ -21,7 +21,7 @@ function Creatives() {
 		<div className="h-[75%]">
 			<div className="w-[70%] bg-gray-200 rounded-full h-[2%] mb-3 dark:bg-gray-700">
 				<div
-					className="bg-blue-600 h-2.5 rounded-full transition-all duration-500"
+					className="bg-blue-600 h-full  rounded-full transition-all duration-500"
 					style={{
 						width: `${percent}%`,
 					}}
