@@ -1,8 +1,15 @@
-import { ADDCREATIVE, CLOSEDRAWER, SHOWDRAWER } from "./creativeActions";
+import {
+	ADDCREATIVE,
+	CLOSEDRAWER,
+	REMOVECREATIVE,
+	SHOWDRAWER,
+} from "./creativeActions";
+
+const lcCreatives = localStorage.getItem("creatives");
 
 const initialState = {
 	visible: false,
-	creatives: [],
+	creatives: lcCreatives !== null ? JSON.parse(lcCreatives) : [],
 };
 
 function creativeReducer(state = initialState, { type, payload }) {
@@ -12,7 +19,12 @@ function creativeReducer(state = initialState, { type, payload }) {
 		case CLOSEDRAWER:
 			return { ...state, visible: false };
 		case ADDCREATIVE:
-			return { ...state, creatives: [...state.creatives, payload] };
+			const data = [...state.creatives, payload];
+			localStorage.setItem("creatives", JSON.stringify(data));
+			return { ...state, creatives: data };
+		case REMOVECREATIVE:
+			localStorage.setItem("creatives", JSON.stringify(payload));
+			return { ...state, creatives: payload };
 		default:
 			return state;
 	}

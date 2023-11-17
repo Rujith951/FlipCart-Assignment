@@ -39,16 +39,19 @@ function Drawer() {
 				title,
 				subtitle,
 				color,
+				id: Date.now(),
 			};
 			dispatch(closeDrawer());
 			setTitle("");
 			setSubTitle("");
+			setColor("");
 			settError(false);
 			setstError(false);
 			dispatch(addCreative(payload));
 		} else {
 			if (!title) settError(true);
 			if (!subtitle) setstError(true);
+			if (!color) alert("please select a color");
 		}
 	};
 

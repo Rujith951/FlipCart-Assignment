@@ -1,4 +1,9 @@
-import { ADDCREATIVE, CLOSEDRAWER, SHOWDRAWER } from "./creativeActions";
+import {
+	ADDCREATIVE,
+	CLOSEDRAWER,
+	REMOVECREATIVE,
+	SHOWDRAWER,
+} from "./creativeActions";
 
 function showDrawer(data) {
 	return { type: SHOWDRAWER, payload: data };
@@ -12,4 +17,8 @@ function addCreative(item) {
 	return { type: ADDCREATIVE, payload: item };
 }
 
-export { showDrawer, closeDrawer, addCreative };
+function removeCreatives(item) {
+	return { type: REMOVECREATIVE, payload: item };
+}
+
+export { showDrawer, closeDrawer, addCreative, removeCreatives };
